@@ -41,11 +41,18 @@
                     @auth('admin')
                     <a href="{{ route('admin.dashboard')}}">Admin dashboard</a>
                     @else
-                    <a href="{{ route('admin.login')}}">Admin login</a>
+                   
                     @endauth
 
                 </div>
-
+                <form method="post" action="{{ route('review')}}">
+                    @csrf
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea2">Review Here</label>
+                    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"></textarea>
+                  </div>
+                  <button type = "submit" class="btn btn-primary">Submit</button>
+                </form>
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">

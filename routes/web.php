@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ReviewController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,7 +43,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     });
     Route::post('logout','Auth\AuthenticatedSessionController@destroy')->name('logout');
 });
-
+Route::post('review',[ReviewController::class,'index'])->name('review');
 
 
 
