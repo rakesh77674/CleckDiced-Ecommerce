@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\IndexController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +14,7 @@ use App\Http\Controllers\ReviewController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[IndexController::class,'index'])->name('/');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
