@@ -272,6 +272,11 @@ return [
             'url'         => '/productSubCategory',
             'icon'        => 'far fa-fw fa-file',
         ],
+        [
+            'text'        => 'logout',
+            'url'         => '/logout',
+            
+        ],
        
     ],
 

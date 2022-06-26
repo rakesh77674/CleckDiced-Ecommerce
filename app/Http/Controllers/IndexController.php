@@ -24,7 +24,7 @@ class IndexController extends Controller
      */
     public function create()
     {
-        //
+       return redirect('admin/login');
     }
 
     /**

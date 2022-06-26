@@ -15,6 +15,7 @@ use App\Http\Controllers\IndexController;
 */
 
 Route::get('/',[IndexController::class,'index'])->name('/');
+Route::get('/logout',[IndexController::class,'create'])->name('/logout');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
